@@ -1,14 +1,13 @@
 import React, { useRef, useState, useEffect } from 'react';
 import './Category-list.css';
 import { FaApple, FaAndroid, FaWindows, FaLinux, FaGithub, FaReact, FaNodeJs } from 'react-icons/fa';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'; // Importing icons for buttons
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
-const ScrollableIcons = () => {
+const CategoryList = () => {
   const scrollRef = useRef(null); // Reference to the scrollable container
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
-  // Increased the number of icons for better scrolling
   const categories = [
     { name: 'Apple', icon: <FaApple /> },
     { name: 'Android', icon: <FaAndroid /> },
@@ -24,7 +23,6 @@ const ScrollableIcons = () => {
     { name: 'GitHub', icon: <FaGithub /> },
     { name: 'React', icon: <FaReact /> },
     { name: 'Node.js', icon: <FaNodeJs /> },
-    { name: 'Node.js', icon: <FaNodeJs /> },
     { name: 'Apple', icon: <FaApple /> },
     { name: 'Android', icon: <FaAndroid /> },
     { name: 'Windows', icon: <FaWindows /> },
@@ -32,6 +30,12 @@ const ScrollableIcons = () => {
     { name: 'GitHub', icon: <FaGithub /> },
     { name: 'React', icon: <FaReact /> },
     { name: 'Node.js', icon: <FaNodeJs /> },
+    { name: 'Apple', icon: <FaApple /> },
+    { name: 'Android', icon: <FaAndroid /> },
+    { name: 'Windows', icon: <FaWindows /> },
+    { name: 'Linux', icon: <FaLinux /> },
+    { name: 'GitHub', icon: <FaGithub /> },
+    { name: 'React', icon: <FaReact /> },
     { name: 'Node.js', icon: <FaNodeJs /> },
     { name: 'Apple', icon: <FaApple /> },
     { name: 'Android', icon: <FaAndroid /> },
@@ -40,6 +44,7 @@ const ScrollableIcons = () => {
     { name: 'GitHub', icon: <FaGithub /> },
     { name: 'React', icon: <FaReact /> },
     { name: 'Node.js', icon: <FaNodeJs /> }
+    // Add more icons as needed...
   ];
 
   // Function to handle scrolling left and right
@@ -83,7 +88,8 @@ const ScrollableIcons = () => {
       <div className="scrollable-container" ref={scrollRef}>
         <div className="icon-wrapper">
           {categories.map((category, index) => (
-            <a href="" className="icon-item" key={index}>{category.icon}
+            <a href="" className="icon-item" key={index}>
+              {category.icon}
               <div className="icon-name">{category.name}</div> {/* Display name below icon */}
             </a>
           ))}
@@ -97,4 +103,4 @@ const ScrollableIcons = () => {
   );
 };
 
-export default ScrollableIcons;
+export default CategoryList;
