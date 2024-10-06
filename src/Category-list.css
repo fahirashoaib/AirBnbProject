@@ -1,0 +1,57 @@
+.scrollable-icons-container {
+  display: flex;
+  align-items: center; /* Center vertically */
+}
+
+.scrollable-container {
+  display: flex;
+  overflow-x: hidden; /* Hide the scrollbar */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  position: relative;
+  width: 100%; /* Adjust the width to fit the parent container */
+}
+
+/* Icons wrapper */
+.icon-wrapper {
+  display: flex;
+  padding: 20px;
+}
+
+/* Individual icon */
+.icon-item {
+  margin: 0 20px; /* Add space between icons */
+  text-align: center; /* Center align text under icons */
+  text-decoration: none;
+  color: black;
+}
+
+/* Icon name below the icon */
+.icon-name {
+  margin-top: 5px; /* Space between icon and name */
+  font-size: 14px; /* Font size for icon names */
+}
+
+/* Scroll buttons */
+.scroll-btn {
+  background-color:white;
+  color: black;
+  border: 1px solid gray;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 25px;
+}
+
+.right{
+    margin: 0 40px 0 0;
+}
+
+.left{
+    margin: 0 0 0 40px;
+}
+
+/* Disable button when at the end */
+.scroll-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
