@@ -1,0 +1,20 @@
+.logo-container {
+    display: flex;
+    padding: 8px 10px;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .logo {
+    width: 35px;
+    margin-right: 6px;
+    aspect-ratio: 1;
+    object-fit: contain;
+  }
+  
+  .title {
+    font-size: 22px;
+    font-weight:600;
+    color: #e14a4f;
+  }
+  
