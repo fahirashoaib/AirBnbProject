@@ -4,6 +4,12 @@
   font-family: Poppins, sans-serif, Roboto, Arial;
 }
 
+.card-heading{
+  font-size: 2em;
+  font-weight: 500;
+  color: #333;
+  margin-left: 6%;
+}
 
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
