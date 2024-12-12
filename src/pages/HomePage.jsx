@@ -18,6 +18,7 @@ function HomePage() {
             <ListingCard categories={listings} />
         </div>
     );
+    
 }
 
 export default HomePage;
