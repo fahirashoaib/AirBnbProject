@@ -1,6 +1,9 @@
+// pages/ListingDetails.jsx
+
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
+
 
 function ListingDetails() {
     const { id } = useParams();
@@ -8,7 +11,7 @@ function ListingDetails() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/api/listings/${id}`)
+        axios.get(`http://localhost:5000/api/Auth/listings/${id}`)
             .then(response => setListing(response.data))
             .catch(error => {
                 console.error('Error fetching listing:', error);
@@ -20,27 +23,30 @@ function ListingDetails() {
         return <p>{error}</p>;
     }
 
-    if(!listing) {
+    if (!listing) {
         return <p>Loading...</p>;
     }
 
     return (
-        listing ? (
-            <div class="listing-display">
+        <div>
+            <div style={{ display:'block',padding:'1%',fontWeight:'bold' }}>
+                <Link to={`/user-dashboard`}>Back to Homepage</Link>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '3% 15%' }}>
                 <div>
-                    <div>
-                        <img src={listing.imageUrl[0]} alt={listing.title} className="listing-image" />
-                    </div>
-                    <p class="highlight">Listing details of {listing.title}</p>
+                    <img src={listing.imageUrl[0]} alt={listing.title} className="listing-image" />
+                </div>
+                <div>
+                    <p className="highlight">Listing details of {listing.title}</p>
                     <p>{listing.location}</p>
                     <p>{listing.availability}</p>
                     <p>${listing.pricePerNight} night</p>
-                    <Link to={`/book/${listing.id}`}>
-                        <p class="highlight">Book Now</p>
+                    <Link to={`/bookings/listing/${listing.id}`}>
+                        <p className="highlight">Book Now</p>
                     </Link>
                 </div>
             </div>
-        ) : <p>Loading...</p>
+        </div>
     );
 }
 

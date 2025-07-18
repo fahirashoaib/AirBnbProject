@@ -1,3 +1,5 @@
+// src/airbnb-logo.jsx
+
 import React from 'react';
 import './airbnb-logo.css'; // Import CSS for styling
 

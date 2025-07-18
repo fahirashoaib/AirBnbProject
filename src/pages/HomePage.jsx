@@ -1,38 +1,34 @@
+// pages/HomePage.jsx
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ListingCard from '../Listing-card.jsx';
-
+import Header from '../Header.jsx';
+import Footer from '../Footer.jsx';
 
 
 function HomePage() {
     const [listings, setListings] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/listings')
-            .then(response => setListings(response.data))
+        axios.get('http://localhost:5000/api/Auth/listings')
+            .then(response => {
+                // Extract the listings array from the response object
+                setListings(response.data.listings);
+            })
             .catch(error => console.error('Error fetching listings:', error));
-    }, []);
+    }, []); // Make sure to include an empty dependency array for the effect to run only once
+
 
     return (
-        <div className="listing-container">
-            <ListingCard categories={listings} />
+        <div>
+            <Header />
+            <div className="listing-container">
+                <ListingCard categories={listings} />
+            </div>
+            <Footer />
         </div>
     );
-    
 }
 
 export default HomePage;
-
-/*
-{listings.map(listing => (
-                <Link class="listing-display" to={`/listings/${listing.id}`}>
-                    <img src={listing.imageUrl} alt={listing.title} className="listing-image" />
-                    <div className="listing-details">
-                        <p class="highlight">{listing.title}</p>
-                        <p>{listing.location}</p>
-                        <p>{listing.availability}</p>
-                        <p class="highlight">${listing.pricePerNight} per night</p>
-                    </div>
-                </Link>
-            ))}
-*/

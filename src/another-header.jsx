@@ -1,3 +1,5 @@
+// src/another-header.jsx
+
 import React, { useState } from 'react';
 import './another-header.css';
 import { FaGlobe, FaSearch, FaUser, FaBars } from 'react-icons/fa';
@@ -18,13 +20,13 @@ const AnotherHeader = () => {
             <div className="header-mid">
                 <div className="display-mh">
                     <a className='add' href="">
-                        <p class="select">Anywhere</p>
+                        <p className="select">Anywhere</p>
                     </a>
                     <a className='add' href="">
-                        <p class="select">Any week</p>
+                        <p className="select">Any week</p>
                     </a>
                     <a className='add' href="">
-                        <p class="select">Add guests</p>
+                        <p className="select">Add guests</p>
                     </a>
                     <a className='search' href=""><FaSearch /></a>
                 </div>

@@ -1,3 +1,5 @@
+// src/Category-list.jsx
+
 import React, { useRef, useState, useEffect } from 'react';
 import './Category-list.css';
 import { FaApple, FaAndroid, FaWindows, FaLinux, FaGithub, FaReact, FaNodeJs } from 'react-icons/fa';

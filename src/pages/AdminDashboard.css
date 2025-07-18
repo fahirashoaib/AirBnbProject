@@ -1,0 +1,35 @@
+.admin-dashboard {
+    padding: 20px;
+  }
+  
+  .dashboard-overview {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+  }
+  
+  .stats-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .listing-management, .booking-management, .user-management {
+    margin-bottom: 30px;
+  }
+  
+  .approve-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .approve-btn:hover {
+    background-color: #45a049;
+  }
+  
