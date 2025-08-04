@@ -1,8 +1,17 @@
-# React + Vite
+# AirBnbProject
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## React + Vite app
 
-Currently, two official plugins are available:
+* This is a simple version of [airbnb](https://www.airbnb.com/) website.
+* This project is somewhat incomplete and needs to be completed in its functionalities e.g. authentication, admin-dashbaord, and booking page.
+* After signing or loging in, we have a user dashboard and an admin dashboard based on the roles.
+* In the user dashboard, we have homepage, listing deatils page and booking page.
+* MongoDB Compass was used for handling the database locally.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### How to build and run:
+* First navigate to the backend folder (airbnb-backend as my backend airbnb folder) and run this command in the terminal:
+* `npm run start`
+* Now, navigate to the frontend folder (AirBnbProject as my frontend airbnb folder) and run this command in the terminal:
+* `npm run dev`
+* If you cloned this project, then first install the backend and frontend dependencies by running this command in the terminal:
+* `npm install`
